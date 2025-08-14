@@ -1,0 +1,5 @@
+# Ignora a pasta de dependências do Node.js
+node_modules/
+
+# Ignora o arquivo JavaScript gerado pelo TypeScript
+seminario.js
