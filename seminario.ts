@@ -1,5 +1,9 @@
 // seminario.ts
+function addNum(a:number, b:number): number{
+    return a + b;
+}
 
+alert(addNum(5,10));
 
 // --- Etapa 1: Código JavaScript (O Ponto de Partida) ---
 
@@ -51,7 +55,7 @@ formatarUsuarioTS(user4);
 console.log("\n-----------------------------------\n");
 
 // --- Etapa 3: Adicionando Flexibilidade com Union Types ---
-// Comente o bloco acima e use este. Mostre como Union Types permitem flexibilidade com segurança.
+
 
 console.log("--- Etapa 3: Código TypeScript com Union Types ---");
 
@@ -64,7 +68,7 @@ interface UsuarioFlex {
 // A função pode aceitar um ID (string ou number) OU um objeto 'UsuarioFlex'.
 function buscarEFormatar(identificador: string | number | UsuarioFlex) {
   
-  // A verificação 'typeof' é usada para estreitar o tipo (narrowing).
+  
   if (typeof identificador === "string" || typeof identificador === "number") {
     console.log(`TS (Union): Buscando usuário com ID: ${identificador}`);
   } else {
