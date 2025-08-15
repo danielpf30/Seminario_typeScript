@@ -3,17 +3,24 @@ function addNum(a:number, b:number): number{
     return a + b;
 }
 
-alert(addNum(5,10));
+
+addNum(5,10);
+console.log(addNum);
 
 // --- Etapa 1: Código JavaScript (O Ponto de Partida) ---
 
 console.log("--- Etapa 1: Código JavaScript ---");
 // @ts-ignore
-function formatarUsuarioJS(usuario) {
+type Usuario={
+  nome:string;
+  sobrenome:string;
+  idade?:number;
+}
+function formatarUsuarioJS(user:Usuario) {
   
   
-  const nomeCompleto = usuario.nome + " " + usuario.sobrenome;
-  console.log(`JS: Usuário: ${nomeCompleto}, Idade: ${usuario.idade}`);
+  const nomeCompleto = user.nome + " " + user.sobrenome;
+  console.log(`JS: Usuário: ${nomeCompleto}, Idade: ${user.idade}`);
 }
 
 const user1 = { nome: "Ana", sobrenome: "Silva", idade: 28 };
@@ -30,11 +37,7 @@ console.log("\n-----------------------------------\n");
 
 console.log("--- Etapa 2: Código TypeScript ---");
 
-interface Usuario {
-  nome: string;
-  sobrenome: string;
-  idade?: number; // O '?' torna a propriedade opcional
-}
+
 
 function formatarUsuarioTS(usuario: Usuario): void {
   const nomeCompleto = `${usuario.nome} ${usuario.sobrenome}`;
